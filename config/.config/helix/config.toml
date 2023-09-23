@@ -1,0 +1,33 @@
+theme = "kanagawa"
+
+[editor]
+auto-save = true
+bufferline = "multiple"
+color-modes = true
+completion-replace = true
+idle-timeout = 300
+rulers = [80]
+shell = ["fish", "-c"]
+
+[editor.lsp]
+display-messages = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+right = ["primary-selection-length", "diagnostics", "version-control", "position", "file-encoding"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+
+[keys.normal]
+X = "extend_line_up"
