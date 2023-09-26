@@ -29,6 +29,5 @@ brew "tldr"
 cask "dotnet-sdk"
 
 # Apps
-brew "docker"
 cask "postman"
 cask "obsidian"
