@@ -4,6 +4,7 @@
 
 [user]
 	name = Sampo Siltanen
+	useConfigOnly = true
 
 [pull]
 	rebase = true
