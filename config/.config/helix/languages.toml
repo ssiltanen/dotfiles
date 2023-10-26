@@ -19,13 +19,62 @@ auto-format = true
 name = "javascript"
 formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
 auto-format = true
+language-servers = [
+  { name = "typescript-language-server" },
+  { name = "eslint" }
+]
 
 [[language]]
 name = "typescript"
 formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
 auto-format = true
+language-servers = [
+  { name = "typescript-language-server" },
+  { name = "eslint" }
+]
 
 [[language]]
 name = "tsx"
 formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
 auto-format = true
+language-servers = [
+  { name = "typescript-language-server" },
+  { name = "eslint" }
+]
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+config.hostInfo = "helix"
+
+# # https://github.com/Microsoft/vscode-eslint#settings-options
+[language-server.eslint]
+args = ["--stdio"]
+command = "vscode-eslint-language-server"
+
+[language-server.eslint.config]
+validate = "on"
+experimental = { useFlatConfig = false }
+rulesCustomizations = []
+run = "onType"
+problems = { shortenToSingleLine = false }
+# nodePath configures the directory in which the eslint server should start its node_modules resolution.
+# This path is relative to the workspace folder (root dir) of the server instance.
+nodePath = ""
+onIgnoredFiles = "off"
+
+[language-server.eslint.config.codeAction]
+[language-server.eslint.config.codeAction.disableRuleComment]
+enable = true
+location = "separateLine"
+
+[language-server.eslint.config.codeAction.showDocumentation]
+# Opening the doc action seems not to work for now at least
+enable = true
+
+[language-server.eslint.config.codeActionOnSave]
+enable = true
+mode = "all"
+
+[language-server.eslint.config.workingDirectory]
+mode = "location"
