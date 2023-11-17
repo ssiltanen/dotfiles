@@ -3,3 +3,4 @@ config/.config/fish/completions
 config/.config/fish/conf.d
 config/.config/fish/fish_variables
 config/.config/fish/functions
+config/.config/gh/hosts.yml
