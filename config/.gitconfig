@@ -1,26 +1,21 @@
 [core]
 	editor = hx
 	pager = delta
-
 [user]
 	name = Sampo Siltanen
 	useConfigOnly = true
-
 [pull]
 	rebase = true
-
 [interactive]
 	diffFilter = delta --color-only
-
 [add.interactive]
 	useBuiltin = false
-
 [delta]
 	navigate = true
 	light = false
-
 [merge]
 	conflictstyle = diff3
-
 [diff]
 	colorMoved = default
+[push]
+	autoSetupRemote = true
