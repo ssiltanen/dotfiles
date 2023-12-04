@@ -33,8 +33,8 @@ render = true
 X = "extend_line_up"
 
 [keys.normal.space]
-o = ":pipe-to kitten @ launch --cwd=\"$(pwd)\" --type=window --window-title=Fsi dotnet fsi"
+o = ":pipe-to kitten @ --password-file ~/.config/kitty/rc-pass launch --cwd=\"$(pwd)\" --type=window --window-title=Fsi dotnet fsi"
 t = [
-  ":pipe-to kitten @ send-text --match='title:^Fsi' --stdin",
-  ":pipe-to kitten @ send-text --match='title:^Fsi' ';;\\n'"
+  ":pipe-to kitten @ --password-file ~/.config/kitty/rc-pass send-text --match='title:^Fsi' --stdin",
+  ":pipe-to kitten @ --password-file ~/.config/kitty/rc-pass send-text --match='title:^Fsi' ';;\\n'"
 ]
