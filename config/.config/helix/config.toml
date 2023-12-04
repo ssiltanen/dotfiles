@@ -6,7 +6,7 @@ bufferline = "multiple"
 color-modes = true
 completion-replace = false
 idle-timeout = 300
-rulers = [80]
+rulers = []
 shell = ["fish", "-c"]
 
 [editor.lsp]
