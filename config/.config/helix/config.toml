@@ -1,7 +1,7 @@
 theme = "kanagawa"
 
 [editor]
-auto-save = true
+auto-save = false
 bufferline = "multiple"
 color-modes = true
 completion-replace = true
