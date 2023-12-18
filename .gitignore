@@ -2,6 +2,6 @@ Brewfile.lock.json
 config/.config/fish/completions
 config/.config/fish/conf.d
 config/.config/fish/fish_variables
-config/.config/fish/functions
+config/.config/fish/functions/*nvm*
 config/.config/gh/hosts.yml
 config/.config/kitty/rc-pass
