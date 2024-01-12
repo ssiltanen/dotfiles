@@ -17,6 +17,8 @@ else
   echo "Brew already installed"
 fi
 
+brew analytics off
+
 # Install Brewfile contents
 brew bundle install
 
