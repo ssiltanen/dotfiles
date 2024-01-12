@@ -24,6 +24,7 @@ brew "git-delta"
 brew "jq"
 brew "yq"
 brew "tldr"
+brew "sqlite"
 
 # Languages
 cask "dotnet-sdk"
