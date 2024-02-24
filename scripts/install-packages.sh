@@ -29,7 +29,7 @@ if [ -z "$(dotnet tool list --global | grep "fsautocomplete")" ]; then
   echo "Installing fsautocomplete"
   dotnet tool install --global fsautocomplete
 else
-  echo "Updating fsautocomplete"
+  echo "Checking for fsautocomplete updates"
   dotnet tool update --global fsautocomplete
 fi
 

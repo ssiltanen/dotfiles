@@ -25,10 +25,7 @@ brew "jq"
 brew "yq"
 brew "tldr"
 brew "sqlite"
+brew "shellcheck"
 
 # Languages
 cask "dotnet-sdk"
-
-# Apps
-cask "postman"
-cask "obsidian"
