@@ -14,6 +14,8 @@ brew "marksman"
 brew "typescript-language-server"
 brew "vscode-langservers-extracted"
 brew "taplo"
+brew "dockerfile-language-server"
+brew "yaml-language-server"
 
 # Git
 brew "gh"
