@@ -23,3 +23,5 @@
 	defaultBranch = main
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
+[alias]
+	fomo = !git fetch origin main && git rebase origin/main
