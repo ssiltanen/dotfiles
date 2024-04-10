@@ -42,6 +42,25 @@ language-servers = [
   { name = "eslint" }
 ]
 
+[language-server]
+fsharp-ls = { command = "fsautocomplete", config = { AutomaticWorkspaceInit = true } }
+
+[[language]]
+name = "fsharp"
+scope = "source.fs"
+roots = ["sln", "fsproj"]
+injection-regex = "fsharp"
+file-types = ["fs", "fsx", "fsi", "fsscript"]
+comment-token = "//"
+block-comment-tokens = { start = "(*", end = "*)" }
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+language-servers = ["fsharp-ls"]
+
+[[grammar]]
+name = "fsharp"
+source = { git = "https://github.com/Nsidorenco/tree-sitter-fsharp", rev = "cbb64ce72c1355b43251c8aca1c3b9eba9468846" }
+
 [language-server.typescript-language-server]
 command = "typescript-language-server"
 args = ["--stdio"]

@@ -8,6 +8,7 @@ completion-replace = false
 idle-timeout = 300
 rulers = []
 shell = ["fish", "-c"]
+popup-border = "all"
 
 [editor.lsp]
 display-messages = true
@@ -30,7 +31,8 @@ hidden = false
 render = true
 
 [keys.normal]
-X = "extend_line_up"
+x = "select_line_below"
+X = "select_line_above"
 
 [keys.normal.space]
 o = ":pipe-to kitten @ --password-file ~/.config/kitty/rc-pass launch --cwd=\"$(pwd)\" --type=window --window-title=Fsi dotnet fsi"
@@ -38,3 +40,7 @@ t = [
   ":pipe-to kitten @ --password-file ~/.config/kitty/rc-pass send-text --match='title:^Fsi' --stdin",
   ":pipe-to kitten @ --password-file ~/.config/kitty/rc-pass send-text --match='title:^Fsi' ';;\\n'"
 ]
+
+[keys.select]
+x = "select_line_below"
+X = "select_line_above"
