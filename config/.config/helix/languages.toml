@@ -1,3 +1,24 @@
+[language-server]
+fsharp-ls = { command = "fsautocomplete", config = { AutomaticWorkspaceInit = true } }
+typescript-ls = {command = "typescript-language-server", args = ["--stdio"], config.hostInfo = "helix" }
+
+[language-server.eslint-ls]
+command = "vscode-eslint-language-server"
+args = ["--stdio"]
+
+# Even though the eslint config values should have default values
+# the lsp does not work unless these values are present in the config
+[language-server.eslint-ls.config]
+validate = "on"
+experimental = { }
+rulesCustomizations = []
+run = "onType"
+problems = { }
+# nodePath configures the directory in which the eslint server should start its node_modules resolution.
+# This path is relative to the workspace folder (root dir) of the server instance.
+nodePath = ""
+codeAction = { disableRuleComment = { enable = true}, showDocumentation = { enable = true }}
+
 [[language]]
 name = "html"
 formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "html"] }
@@ -20,8 +41,8 @@ name = "javascript"
 formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
 auto-format = true
 language-servers = [
-  { name = "typescript-language-server" },
-  { name = "eslint" }
+  { name = "typescript-ls" },
+  { name = "eslint-ls" }
 ]
 
 [[language]]
@@ -29,8 +50,8 @@ name = "typescript"
 formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
 auto-format = true
 language-servers = [
-  { name = "typescript-language-server" },
-  { name = "eslint" }
+  { name = "typescript-ls" },
+  { name = "eslint-ls" }
 ]
 
 [[language]]
@@ -38,62 +59,16 @@ name = "tsx"
 formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
 auto-format = true
 language-servers = [
-  { name = "typescript-language-server" },
-  { name = "eslint" }
+  { name = "typescript-ls" },
+  { name = "eslint-ls" },
 ]
-
-[language-server]
-fsharp-ls = { command = "fsautocomplete", config = { AutomaticWorkspaceInit = true } }
 
 [[language]]
 name = "fsharp"
-scope = "source.fs"
-roots = ["sln", "fsproj"]
-injection-regex = "fsharp"
-file-types = ["fs", "fsx", "fsi", "fsscript"]
-comment-token = "//"
 block-comment-tokens = { start = "(*", end = "*)" }
-indent = { tab-width = 4, unit = "    " }
 auto-format = true
 language-servers = ["fsharp-ls"]
 
 [[grammar]]
 name = "fsharp"
-source = { git = "https://github.com/Nsidorenco/tree-sitter-fsharp", rev = "cbb64ce72c1355b43251c8aca1c3b9eba9468846" }
-
-[language-server.typescript-language-server]
-command = "typescript-language-server"
-args = ["--stdio"]
-config.hostInfo = "helix"
-
-# # https://github.com/Microsoft/vscode-eslint#settings-options
-[language-server.eslint]
-args = ["--stdio"]
-command = "vscode-eslint-language-server"
-
-[language-server.eslint.config]
-validate = "on"
-experimental = { useFlatConfig = false }
-rulesCustomizations = []
-run = "onType"
-problems = { shortenToSingleLine = false }
-# nodePath configures the directory in which the eslint server should start its node_modules resolution.
-# This path is relative to the workspace folder (root dir) of the server instance.
-nodePath = ""
-onIgnoredFiles = "off"
-
-[language-server.eslint.config.codeAction]
-[language-server.eslint.config.codeAction.disableRuleComment]
-enable = true
-location = "separateLine"
-
-[language-server.eslint.config.codeAction.showDocumentation]
-# Opening the doc action seems not to work for now at least
-enable = true
-
-[language-server.eslint.config.codeActionOnSave]
-enable = true
-mode = "all"
-
-[language-server.eslint.config.workingDirectory]
-mode = "location"
+source = { git = "https://github.com/ionide/tree-sitter-fsharp", rev = "52389294922565d67e15acae45c99111793a848a" }
