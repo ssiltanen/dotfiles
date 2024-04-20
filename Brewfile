@@ -16,6 +16,7 @@ brew "vscode-langservers-extracted"
 brew "taplo"
 brew "dockerfile-language-server"
 brew "yaml-language-server"
+brew "tailwindcss-language-server"
 
 # Git
 brew "gh"

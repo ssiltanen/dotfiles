@@ -1,6 +1,7 @@
 [language-server]
 fsharp-ls = { command = "fsautocomplete", config = { AutomaticWorkspaceInit = true } }
 typescript-ls = {command = "typescript-language-server", args = ["--stdio"], config.hostInfo = "helix" }
+tailwind-ls = { command = "tailwindcss-language-server", args = ["--stdio"] }
 
 [language-server.eslint-ls]
 command = "vscode-eslint-language-server"
@@ -61,6 +62,7 @@ auto-format = true
 language-servers = [
   { name = "typescript-ls" },
   { name = "eslint-ls" },
+  { name = "tailwind-ls" }
 ]
 
 [[language]]
