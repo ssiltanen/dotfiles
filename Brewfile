@@ -7,6 +7,7 @@ brew "fisher"
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono-nerd-font"
 brew "starship"
+brew "glow"
 
 # Editor
 brew "helix"
