@@ -18,6 +18,8 @@ brew "taplo"
 brew "dockerfile-language-server"
 brew "yaml-language-server"
 brew "tailwindcss-language-server"
+brew "rust-analyzer"
+brew "llvm"
 
 # Git
 brew "gh"
@@ -33,3 +35,4 @@ brew "shellcheck"
 
 # Languages
 cask "dotnet-sdk"
+brew "rustup-init"

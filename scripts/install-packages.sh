@@ -33,4 +33,10 @@ else
   dotnet tool update --global fsautocomplete
 fi
 
+# Invoke rustup installation, if rustup does not exist yet
+if ! command -v rustup > /dev/null; then
+  echo "Installing rustup"
+  rustup-init
+fi
+
 exit 0
