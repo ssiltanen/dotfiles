@@ -1,6 +1,6 @@
 [language-server]
 fsharp-ls = { command = "fsautocomplete", config = { AutomaticWorkspaceInit = true } }
-typescript-ls = {command = "typescript-language-server", args = ["--stdio"], config.hostInfo = "helix" }
+typescript-ls = { command = "typescript-language-server", args = ["--stdio"], config.hostInfo = "helix" }
 tailwind-ls = { command = "tailwindcss-language-server", args = ["--stdio"] }
 
 [language-server.eslint-ls]
@@ -73,4 +73,4 @@ language-servers = ["fsharp-ls"]
 
 [[grammar]]
 name = "fsharp"
-source = { git = "https://github.com/ionide/tree-sitter-fsharp", rev = "52389294922565d67e15acae45c99111793a848a" }
+source = { git = "https://github.com/ionide/tree-sitter-fsharp", rev = "996ea9982bd4e490029f84682016b6793940113b" }
