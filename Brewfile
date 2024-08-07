@@ -35,4 +35,4 @@ brew "shellcheck"
 
 # Languages
 cask "dotnet-sdk"
-brew "rustup-init"
+brew "rustup"
