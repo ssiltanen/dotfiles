@@ -30,3 +30,4 @@
 	strategy = incremental
 [alias]
 	fomo = !git fetch origin main && git rebase origin/main
+	push-lease = !git push --force-with-lease
