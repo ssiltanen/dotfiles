@@ -25,5 +25,8 @@
 	ui = auto
 [branch]
 	sort = -committerdate
+[maintenance]
+	auto = false
+	strategy = incremental
 [alias]
 	fomo = !git fetch origin main && git rebase origin/main
