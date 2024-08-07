@@ -23,5 +23,7 @@
 	defaultBranch = main
 [column]
 	ui = auto
+[branch]
+	sort = -committerdate
 [alias]
 	fomo = !git fetch origin main && git rebase origin/main
