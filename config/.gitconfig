@@ -21,5 +21,7 @@
 	autoSetupRemote = true
 [init]
 	defaultBranch = main
+[column]
+	ui = auto
 [alias]
 	fomo = !git fetch origin main && git rebase origin/main
