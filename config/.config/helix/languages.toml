@@ -67,7 +67,6 @@ language-servers = [
 
 [[language]]
 name = "fsharp"
-block-comment-tokens = { start = "(*", end = "*)" }
 auto-format = true
 language-servers = ["fsharp-ls"]
 
