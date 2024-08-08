@@ -32,6 +32,7 @@ brew "yq"
 brew "tldr"
 brew "sqlite"
 brew "shellcheck"
+brew "hyperfine"
 
 # Languages
 cask "dotnet-sdk"
