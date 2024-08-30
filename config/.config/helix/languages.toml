@@ -4,7 +4,7 @@ typescript-ls = { command = "typescript-language-server", args = ["--stdio"], co
 tailwind-ls = { command = "tailwindcss-language-server", args = ["--stdio"] }
 
 [language-server.eslint-ls]
-command = "vscode-eslint-language-server"
+command = "eslint-language-server"
 args = ["--stdio"]
 
 # Even though the eslint config values should have default values
