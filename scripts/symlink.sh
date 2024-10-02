@@ -32,7 +32,7 @@ done
 # Create symlink for global .gitconfig
 if [ -f "$HOME/.gitconfig" ]; then
   echo "Removing $HOME/.gitconfig"
-  rm -f "$HOME/.gitconfig"
+  rm "$HOME/.gitconfig"
 fi
 echo "Creating symlink between $BASE_PATH/config/.gitconfig and $HOME/.gitconfig"
 ln -s "$BASE_PATH/config/.gitconfig" "$HOME/.gitconfig"
@@ -40,7 +40,7 @@ ln -s "$BASE_PATH/config/.gitconfig" "$HOME/.gitconfig"
 # Create symlink for global .gitignore
 if [ -f "$HOME/.gitignore" ]; then
   echo "Removing $HOME/.gitignore"
-  rm -f "$HOME/.gitignore"
+  rm "$HOME/.gitignore"
 fi
 echo "Creating symlink between $BASE_PATH/config/.gitignore and $HOME/.gitignore"
 ln -s "$BASE_PATH/config/.gitignore" "$HOME/.gitignore"
