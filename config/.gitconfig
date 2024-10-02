@@ -1,6 +1,7 @@
 [core]
 	editor = hx
 	pager = delta
+	excludesFile = '~/.gitignore'
 [user]
 	name = Sampo Siltanen
 	useConfigOnly = true
